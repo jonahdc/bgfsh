@@ -1,7 +1,7 @@
 {
-  "name": "reactux",
+  "name": "bgfsh",
   "version": "1.0.0",
-  "description": "A react boilerplate using webpack",
+  "description": "A simple react-redux site of experimentation and exploration",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot"
