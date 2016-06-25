@@ -1,0 +1,82 @@
+
+/* Bootstrap Overrides */
+.navbar-default {
+  background-color: #fff;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.navbar-default .navbar-brand {
+  color: $primary-color-dark;
+  font-size: 14px;
+  letter-spacing: 1px;
+  @include transition(box-shadow 0.1s ease-in, color 0.1s ease-in);
+}
+
+.navbar-default .navbar-brand:active {
+  color: $primary-color-dark;
+}
+
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  box-shadow: 0 2px 0 $primary-color;
+  color: $primary-color;
+}
+
+.navbar-default .navbar-nav li {
+  a {
+    color: $primary-color-dark;
+
+  }
+  a.active {
+    color: #fff;
+    background-color: $primary-color-dark;
+  }
+}
+.navbar-default .navbar-nav>li>a:focus {
+  background-color: $primary-color-dark;
+}
+.navbar-default .navbar-nav>li>a {
+  font-size: 12px;
+  @include transition(color .25s ease-in-out, background .25s ease-in-out, box-shadow .25s ease-in-out);
+
+}
+.navbar-default .navbar-nav>li>a:hover {
+  box-shadow: 0 2px 0 $primary-color-dark;
+  background-color: $primary-color-dark;
+  opacity: 10;
+}
+
+
+.preface {
+  margin: 100px 0 100px 0;
+
+  &__title {
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.regimen-container {
+  background: #fff;
+  min-height: 400px;
+
+}
+
+.btn, .btn:hover, btn:focus {
+  border: 0;
+}
+
+.btn.btn-primary {
+  @include border-radius(3px);
+  background: $accent-color;
+  font-size: 12px;
+  border: 0;
+  width: 100%;
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:hover {
+  background: $accent-color-light;
+  border: 0;
+}

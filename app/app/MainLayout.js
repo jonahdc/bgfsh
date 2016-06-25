@@ -11,10 +11,7 @@ export default class MainLayout extends React.Component{
     return (
 <div>
         <Header />
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-<div class="content-area">
+
               <ReactCSSTransitionGroup
              component="div"
              transitionName="page"
@@ -23,10 +20,7 @@ export default class MainLayout extends React.Component{
                key: this.props.location.pathname
              })}
             </ReactCSSTransitionGroup>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         </div>
     );

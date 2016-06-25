@@ -1,17 +1,15 @@
 /* Page transition animations */
 .page-enter {
   opacity: 0.01;
-  transition: opacity 1s ease-in;
-  animation: slideUp 1s;
-  position: absolute;
+  transition: opacity 0.25s ease-in;
 }
 .page-enter.page-enter-active {
   opacity: 1;
 }
 .page-leave {
   opacity: 1;
-  transition: background 1s ease-in;
-  position: absolute;
+  transition: background 0.25s ease-in;
+
 }
 .page-leave.page-leave-active {
   opacity: 0;
@@ -20,12 +18,4 @@
 .link-active {
   color: #bbbbbb;
   text-decoration: none;
-}
-@keyframes slideUp {
-  from {
-    top: 20px;
-  }
-  to {
-    top: 0;
-  }
 }

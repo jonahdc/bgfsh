@@ -7,7 +7,7 @@ import Bootstrap from './libs/bootstrap/bootstrap';
 import MainLayout from './app/MainLayout';
 import Home from './home/Home';
 import About from './about/About';
-
+import RegimenApp from './regimen/App';
 
 const app = document.getElementById('app');
 
@@ -18,6 +18,7 @@ ReactDOM.render(
     <Route component={MainLayout} >
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/regimen" component={RegimenApp} />
     </Route>
   </Router>
   ,app
