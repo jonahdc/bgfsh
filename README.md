@@ -8,7 +8,7 @@ A site based on react-redux showing some of my experimentations and explorations
 npm install -g bower bower-installer
 ```
 
-####Clone, Install and Run
+####Usage
 
 ```
 git clone https://github.com/jonahdc/react-webpack.git
