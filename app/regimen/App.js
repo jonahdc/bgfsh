@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import Regimen from './Regimen'
 import { Provider } from 'react-redux'
-import regimenApp from './RegimenReducers'
+import reducers from './reducers'
 
-let store = createStore(regimenApp, applyMiddleware(logger));
+let store = createStore(reducers, applyMiddleware(logger));
 
 function logger({ getState }) {
   return (next) => (action) => {
