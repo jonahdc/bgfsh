@@ -13,7 +13,7 @@ export default class RegimenTimelineEntry extends React.Component {
    return (
      <div>
 
-     <div class="timeline-entry">
+     <div class="timeline-entry clearfix">
      <div class="timeline-entry__meta">
 
        <span class="timeline-entry__datetime">{ dateTime }</span>

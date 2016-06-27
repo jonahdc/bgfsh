@@ -158,12 +158,12 @@ textarea {
   font-weight: 700;
   margin: 0;
 }
-.timeline-entry__title:before {
+.timeline-entry__title:after {
   content: '';
   display: block;
   border: 1px solid $primary-color;
-  width: 10px;
-  margin: 0 0 10px;
+  width: 30px;
+  margin: 10px 0
 }
 .timeline-entry__desc {
   font-size: 12px;
