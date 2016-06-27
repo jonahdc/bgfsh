@@ -15,7 +15,7 @@ export function observations(state = [], action){
             id: action.observation.id,
             title: action.observation.title,
             description: action.observation.description,
-            datetime: action.observation.dateTime
+            dateTime: action.observation.dateTime
           }, ...state
         ];
     default:

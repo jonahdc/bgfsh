@@ -18,7 +18,9 @@ export class Regimen extends React.Component {
     let id = helpers.getNewID(this.props.observations);
     console.log(id);
     data.id = id;
-    data.dateTime = 'the date time';
+
+    let dateTime = new Date();
+    data.dateTime = dateTime.today() + ' ' + dateTime.timeNow();
     this.props.dispatch(addObservation(data));
     this.props.dispatch( initialize('Regimen', {}));
   }
