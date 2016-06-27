@@ -66,6 +66,8 @@ body {
   font-size: 18px;
 }
 
+@import './transitions.scss';
+@import './home.scss';
 @import './sandbox.scss';
 @import './regimen.scss';
 @import './overrides.scss';

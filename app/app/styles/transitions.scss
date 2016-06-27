@@ -1,14 +1,14 @@
 /* Page transition animations */
 .page-enter {
   opacity: 0.01;
-  transition: opacity 0.25s ease-in;
+  @include transition(opacity 0.25s ease-in);
 }
 .page-enter.page-enter-active {
   opacity: 1;
 }
 .page-leave {
   opacity: 0;
-  transition: background 0.1s ease-in;
+    @include transition(background 0.1s ease-in);
   position: absolute;
   top: 0;
   border: 1px solid;
@@ -30,7 +30,7 @@
 .timeline-animation-enter.timeline-animation-enter-active {
   opacity: 1;
   min-height: 110px;
-  transition: all 0.5s ease-in-out;
+    @include transition(all 0.5s ease-in-out);
 }
 .timeline-animation-enter .timeline-entry__content:after {
   opacity: 0;
@@ -40,5 +40,5 @@
 .timeline-animation-enter.timeline-animation-enter-active .timeline-entry__content:after {
   opacity: 1;
   transform: scaleY(1);
-  transition: all 0.5s ease-in;
+    @include transition(all 0.5s ease-in);
 }

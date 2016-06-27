@@ -18,7 +18,7 @@ ReactDOM.render(
     <Route component={MainLayout} >
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/regimen" component={RegimenApp} />
+      <Route path="/sandbox" component={RegimenApp} />
     </Route>
   </Router>
   ,app

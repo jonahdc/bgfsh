@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from './Header';
 import Navbar from './Navbar';
 
-require('./styles/transitions.scss')
+
 
 export default class MainLayout extends React.Component{
   render() {
