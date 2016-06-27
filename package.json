@@ -34,6 +34,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.4",
+    "moment": "^2.13.0",
     "react-addons-css-transition-group": "^15.1.0",
     "redux-form": "^5.2.5"
   },

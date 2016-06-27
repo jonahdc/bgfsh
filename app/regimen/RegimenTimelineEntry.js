@@ -1,12 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { getTime } from './RegimenHelpers'
+import { getDisplayTime } from './RegimenHelpers'
+import moment from 'moment'
 
 export default class RegimenTimelineEntry extends React.Component {
 
   render() {
-  let dateTime = getTime(this.props.entry.dateTime);
+  let unixTimeStamp = moment.unix(this.props.entry.dateTime);
+  let dateTime = unixTimeStamp.format('HH:mm');
+  let date = unixTimeStamp.format('dd-MM-YYYY');
+  console.log(this.props.isNewDay);
    return (
+     <div>
+
      <div class="timeline-entry">
      <div class="timeline-entry__meta">
 
@@ -20,6 +26,7 @@ export default class RegimenTimelineEntry extends React.Component {
          <p>{ this.props.entry.description }</p>
          </div>
        </div>
+     </div>
      </div>
    );
   }

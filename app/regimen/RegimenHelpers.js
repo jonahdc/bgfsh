@@ -16,5 +16,19 @@ export function getNewID(array){
 
 
 export function getTime(entryDateTime){
-  return (entryDateTime !== 'undefined') ? entryDateTime.split(' ')[1] : '';
+  return (entryDateTime) ? entryDateTime.split(' ')[1] : '';
+}
+
+export function getFormattedTime(entryTime){
+  return (entryTime) ? entryTime.substr(0,5) : '';
+}
+
+export function getDisplayTime(entryDateTime) {
+  let time = getTime(entryDateTime);
+  time = getFormattedTime(time);
+  return time;
+}
+
+export function isWithinMinute(prevTime, currentTime){
+
 }

@@ -1,3 +1,4 @@
+$primary-color-darkest: #226480;
 $primary-color-dark: #247BA0;
 $primary-color: #70C1B3;
 $primary-text-color: #456990;
@@ -32,7 +33,7 @@ body {
   padding: 0;
 }
 .frame {
-  height: 400px;
+  height: 500px;
   background: $primary-color-dark;
   position: absolute;
   left: 0;
@@ -156,8 +157,10 @@ textarea {
   // display: inline-block;
   float: left;
   min-height: 100px;
-  padding: 0 20px 0 50px;
+  padding: 0 20px 0 0;
   position: relative;
+  width: 100px;
+  text-align: right;
 }
 .timeline-entry__datetime {
   font-size: 12px;
@@ -215,4 +218,60 @@ textarea {
 .clearfix {
   overflow: auto;
 }
+
+.preface__desc {
+  width: 940px;
+  margin: 0 auto;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.preface__desc p {
+  font-size: 14px;
+}
+
+.preface__desc h4 {
+  text-align: center;
+}
+
+.preface__desc__head {
+  font-size: 18px;
+}
+
+.sandbox-feature {
+
+}
+.sandbox-feature__intro {
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background: $primary-color-darkest;
+  padding: 20px;
+  @include border-radius(3px)
+}
+
+%common-shadow {
+  @include box-shadow(0 0 10px rgba(0, 0, 0, 0.3))
+}
+
+.sandbox-feature__intro h3 {
+  font-size: 18px;
+  color: $primary-color;
+  margin: 0;
+  font-weight: 400;
+}
+
+.sandbox-feature__intro h3:after {
+  display: block;
+  content: '';
+  border: 1px solid;
+  width: 20px;
+  margin: 10px 0;
+}
+
+.sandbox-feature__intro p {
+    font-size: 12px;
+      color: #fff;
+}
+
 @import './overrides.scss';
