@@ -21,6 +21,11 @@ $accent-color-light: #ff5e89;
 body {
   font-family: 'montserrat', sans-serif;
   font-size: 16px;
+  color: $primary-color-dark;
+}
+html,
+body {
+  height: 100%;
 }
 * {
   margin: 0;
@@ -34,11 +39,7 @@ body {
   right: 0;
 }
 .content-area {
-  position: absolute;
-  top: 50px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 100%;
 }
 .regimen-container {
   width: 940px;
@@ -60,11 +61,10 @@ body {
 .widget h3 {
   color: #fff;
 }
-
 .light-header {
   font-size: 14px;
   font-weight: 400;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 input[type="text"],
 input[type="text"]:focus,
@@ -100,22 +100,19 @@ $input-placeholder-color: #a9fff0;
   border: 1px solid #000;
 }
 %element:-moz-placeholder {
-  -moz-transition: padding 0.5s;
-  transition: padding 0.5s;
+   @include transition(all 0.25s ease);
   color: $input-placeholder-color;
 }
 %element::-moz-placeholder {
-  -moz-transition: padding 0.5s;
-  transition: padding 0.5s;
+ @include transition(all 0.25s ease);
   color: $input-placeholder-color;
 }
 %element:-ms-input-placeholder {
-  -ms-transition: padding 0.5s;
-  transition: padding 0.5s;
+ @include transition(all 0.25s ease);
   color: $input-placeholder-color;
 }
 %element::-webkit-input-placeholder {
-  @include transition(all 0.25s ease);
+   @include transition(all 0.25s ease);
   color: $input-placeholder-color;
   position: relative;
 }
@@ -135,56 +132,69 @@ textarea {
 %element:hover::-moz-placeholder {}
 %element:hover:-ms-input-placeholder {}
 %element:hover::-webkit-input-placeholder {}
-
 .body {
   position: relative;
   margin-left: 300px;
   padding: 20px;
 }
-
-.regimen-entries__h3 {
-
-}
-
+.regimen-entries__h3 {}
 .footer {
-
   margin: 0 auto;
   text-align: center;
-  margin: 30px 0 0 0;
+  margin: 30px 0 0;
   color: #999;
   font-style: italic;
 }
-
 .footer p {
   font-size: 12px;
   font-weight: normal;
-
 }
-
 .timeline-entry {
-
-
 }
-
 .timeline-entry__meta {
-  display: inline-block;
+  // display: inline-block;
+  float: left;
   min-height: 100px;
   padding: 0 20px 0 50px;
   position: relative;
 }
-
 .timeline-entry__datetime {
-    font-size: 12px;
+  font-size: 12px;
 }
+//
+// .timeline-entry__meta:before,
+// .timeline-entry__meta:after {
+//   display: block;
+//   content: 'asdf';
+//   position: absolute;
+// }
+// .timeline-entry__meta:before {
+//   @include border-radius(100%);
+//   width: 9px;
+//   height: 9px;
+//   border: 1px solid $primary-color;
+//   top: 5px;
+//   background: #fff;
+//   z-index: 1;
+//   right: -3px;
+// }
+// .timeline-entry__meta:after {
+//   border-right: 3px solid $primary-color;
+//   background: #efefef;
+//   min-height: 110px;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+// }
 
-.timeline-entry__meta:before,
-.timeline-entry__meta:after {
+
+.timeline-entry__content:before,
+.timeline-entry__content:after {
   display: block;
   content: '';
-  position: absolute;
+ position: absolute;
 }
-
-.timeline-entry__meta:before {
+.timeline-entry__content:before {
   @include border-radius(100%);
   width: 9px;
   height: 9px;
@@ -192,34 +202,46 @@ textarea {
   top: 5px;
   background: #fff;
   z-index: 1;
-  right: -3px;
+  left: -3px;
 }
-
-.timeline-entry__meta:after {
-  border-right: 3px solid $primary-color;
+.timeline-entry__content:after {
+  border-left: 3px solid $primary-color;
   min-height: 110px;
-  right: 0;
-  top:0;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .timeline-entry__content {
-  display:inline-block;
   box-sizing: border-box;
-    vertical-align: top;
-  margin: 0 0 0 20px;
-    border: 1px solid;
-
+  vertical-align: top;
+  min-height: 110px;
+  margin: 0 0 0 100px;
+  position: relative;
+  padding: 20px;
 }
-
 .timeline-entry__title {
   font-size: 14px;
   font-weight: 700;
   margin: 0;
 }
+.timeline-entry__title:before {
+  content: '';
+  display: block;
+  border: 1px solid $primary-color;
+  width: 10px;
+  margin: 0 0 10px 0;
+}
+
 
 .timeline-entry__desc {
   font-size: 12px;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
 }
-
+.regimen-container {
+  transition: all 1s ease-in;
+}
+.clearfix {
+  overflow: auto;
+}
 @import './overrides.scss';
