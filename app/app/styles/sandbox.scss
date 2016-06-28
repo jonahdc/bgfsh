@@ -3,7 +3,6 @@
 
 }
 .sandbox-feature__intro {
-  width: 940px;
   margin: 0 auto;
   margin-bottom: 10px;
   background: $primary-color-darkest;
@@ -34,3 +33,28 @@
     font-size: 12px;
       color: #fff;
 }
+
+
+/* Large desktops and laptops */
+@media (min-width: 992px) {
+
+  .sandbox-feature__intro {
+    width: 940px;
+  }
+
+}
+/* Landscape tablets and medium desktops */
+// @media (min-width: 992px) and (max-width: 1199px) {
+//       padding: 50px;
+//
+// }
+/* Portrait tablets and small desktops */
+@media (min-width: 0) and (max-width: 991px) {
+
+
+
+}
+// /* Landscape phones and portrait tablets */
+// @media (max-width: 767px) {}
+// /* Portrait phones and smaller */
+// @media (max-width: 480px) {}

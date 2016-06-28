@@ -5,9 +5,10 @@ $primary-text-color: #456990;
 $accent-color: #F45B69;
 $accent-color-light: #ff5e89;
 @mixin transition($params...) {
-  transition: $params;
   -moz-transition: $params;
   -webkit-transition: $params;
+  -o-transition: $params;
+  transition: $params;
 }
 @mixin border-radius($params...) {
   border-radius: $params;
@@ -41,30 +42,13 @@ body {
 }
 .content-area {
   height: 100%;
+  position: relative;
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.preface__desc {
-  width: 940px;
-  margin: 0 auto;
-  color: #fff;
-  margin-top: 30px;
-}
-
-.preface__desc p {
-  font-size: 14px;
-}
-
-.preface__desc h4 {
-  text-align: center;
-}
-
-.preface__desc__head {
-  font-size: 18px;
-}
 
 @import './transitions.scss';
 @import './home.scss';

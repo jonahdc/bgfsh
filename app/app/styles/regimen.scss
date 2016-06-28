@@ -1,6 +1,24 @@
 
+
+.preface__desc {
+  margin: 0 auto;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.preface__desc p {
+  font-size: 14px;
+}
+
+.preface__desc h4 {
+  text-align: center;
+}
+
+.preface__desc__head {
+  font-size: 18px;
+}
+
 .regimen-container {
-  width: 940px;
   margin: 0 auto;
   position: relative;
   @include box-shadow(0 0 10px rgba(0, 0, 0, 0.3));
@@ -172,3 +190,33 @@ textarea {
 .regimen-container {
   transition: all 1s ease-in;
 }
+
+
+/* Large desktops and laptops */
+@media (min-width: 992px) {
+
+  .preface__desc {
+    width: 940px;
+  }
+
+
+  .regimen-container {
+    width: 940px;
+  }
+
+}
+/* Landscape tablets and medium desktops */
+// @media (min-width: 992px) and (max-width: 1199px) {
+//       padding: 50px;
+//
+// }
+/* Portrait tablets and small desktops */
+@media (min-width: 0) and (max-width: 991px) {
+
+
+
+}
+// /* Landscape phones and portrait tablets */
+// @media (max-width: 767px) {}
+// /* Portrait phones and smaller */
+// @media (max-width: 480px) {}

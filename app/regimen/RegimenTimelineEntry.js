@@ -9,7 +9,6 @@ export default class RegimenTimelineEntry extends React.Component {
   let unixTimeStamp = moment.unix(this.props.entry.dateTime);
   let dateTime = unixTimeStamp.format('HH:mm');
   let date = unixTimeStamp.format('dd-MM-YYYY');
-  console.log(this.props.isNewDay);
    return (
      <div>
 

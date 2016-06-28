@@ -16,10 +16,10 @@ export class Regimen extends React.Component {
   }
 
   handleSubmit(data){
-    let id = helpers.getNewID(this.props.observations);
-    console.log(id);
+    let timeStamp = moment().unix();
+    let id = helpers.getNewID(timeStamp);
     data.id = id;
-    data.dateTime = moment().unix();
+    data.dateTime = timeStamp;
     this.props.dispatch(addObservation(data));
     this.props.dispatch( initialize('Regimen', {}));
   }
@@ -40,7 +40,7 @@ export class Regimen extends React.Component {
           <div class="sandbox-feature__intro">
           <h3>Tracker</h3>
           <p>Done with React-Redux and a few other add-ons, the following functionality shows a portion of a tracker application under development.</p>
-</div>
+ </div>
           <div class="regimen-container">
             <div class="sidebar">
             <RegimenForm onSubmit={this.handleSubmit.bind(this)}/>
@@ -59,11 +59,9 @@ export class Regimen extends React.Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
 function mapDispatchToProps(dispatch){
   return {
     onSubmitClick: (observation) => {
-        const b = {title: 'test', description:'descccc', id:'ID', dateTime: 'dateTime'};
         dispatch(addObservation(b));
     }
   }

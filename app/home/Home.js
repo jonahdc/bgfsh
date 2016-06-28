@@ -15,7 +15,7 @@ export default class Home extends React.Component {
 
                 <div class="home-container">
                   <div class="primary-section">
-                  <h3>Hi, there</h3>
+                  <h3>Hello</h3>
                   <p>Welcome to bgfsh, my tiny space on the web dedicated to anything front-end development and UI design.</p>
                   </div>
                   <div class="secondary-section">

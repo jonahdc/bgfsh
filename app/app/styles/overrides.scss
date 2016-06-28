@@ -80,3 +80,12 @@
   background: $accent-color-light;
   border: 0;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: $primary-color-dark;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background: none;
+  border: 1px solid $primary-color;
+}
