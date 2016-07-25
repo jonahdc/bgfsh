@@ -11,8 +11,8 @@ npm install -g bower bower-installer
 ####Usage
 
 ```
-git clone https://github.com/jonahdc/react-webpack.git
-cd react-webpack
+git clone https://github.com/jonahdc/bgfsh.git
+cd bgfsh
 npm install
 bower-installer
 npm run dev
